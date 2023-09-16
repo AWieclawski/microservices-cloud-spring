@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: ${ACTIVE_PROFILE} # development, production
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AWieclawski/microservices-cloud-spring
+          search-paths: config-dir
+          try-master-branch: false
+  security:
+    user:
+      name: ${CONFIG_SERVER_USER}
+      password: ${CONFIG_SERVER_PASS}

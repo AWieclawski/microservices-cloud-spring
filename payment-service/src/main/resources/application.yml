@@ -1,0 +1,14 @@
+# payment-service application
+spring:
+  application:
+    name: payment-service
+  cloud:
+    config:
+      label: ${CONFIG_SERVER_LABEL}
+  profiles:
+    active: ${ACTIVE_PROFILE}
+  config:
+    import:
+      optional:configserver:http://${CONFIG_SERVER_USER}:${CONFIG_SERVER_PASS}@localhost:${CONFIG_SERVER_PORT}1
+#      ,optional:configserver:http://${CONFIG_SERVER_USER}:${CONFIG_SERVER_PASS}@localhost:${CONFIG_SERVER_PORT}2
+

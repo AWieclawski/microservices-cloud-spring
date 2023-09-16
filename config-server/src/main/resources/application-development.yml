@@ -1,0 +1,4 @@
+# config-server-development
+server:
+  port: ${CONFIG_SERVER_PORT}1
+

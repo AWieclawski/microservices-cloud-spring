@@ -1,0 +1,17 @@
+# remote-discovery-server development
+server:
+  port: ${DISCOVERY_SERVER_PORT}1
+eureka:
+  client:
+    register-with-eureka: false # only if standalone
+    fetch-registry: false # only if standalone
+# re-verse commented lines if high availability mode required
+#    serviceUrl:
+#      defaultZone:
+#        http://localhost:${DISCOVERY_SERVER_PORT}2/eureka/ # ha mode
+  server:
+    enable-self-preservation: false # only if standalone
+  instance:
+    metadataMap:
+      zone: ${zone_name}
+    hostname: localhost # required only if standalone

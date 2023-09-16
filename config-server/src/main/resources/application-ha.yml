@@ -1,0 +1,3 @@
+# config-server-ha
+server:
+  port: ${CONFIG_SERVER_PORT}2

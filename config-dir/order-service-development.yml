@@ -1,0 +1,26 @@
+# order-service-development
+server:
+  port: ${app_port}
+spring:
+  jackson:
+    default-property-inclusion: always
+  cloud:
+    function:
+      definition: paymentOrderEventsConsumer
+    stream:
+      bindings:
+        paymentOrderEventsConsumer-in-0:
+          destination: payment-order-events
+          group: order-001
+eureka:
+  client:
+    should-enforce-registration-at-init: true
+    serviceUrl:
+      defaultZone:
+        http://localhost:${DISCOVERY_SERVER_PORT}1/eureka/
+#        http://localhost:${DISCOVERY_SERVER_PORT}2/eureka/  # ha mode
+    registry-fetch-interval-seconds: 1${DISCOVERY_REGISTRY_INTERVAL}
+  instance:
+    prefer-ip-address: true
+    metadataMap:
+      zone: ${zone_name}

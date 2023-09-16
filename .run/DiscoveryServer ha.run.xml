@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="DiscoveryServer ha" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="edu.awieclawski.discovery.DiscoveryServerApp" />
+    <module name="discovery-server" />
+    <option name="VM_PARAMETERS" value="-Dspring.profiles.active=ha -Dzone_name=EU" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="edu.awieclawski.discovery.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

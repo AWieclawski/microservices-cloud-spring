@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ConfigServer EU" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="edu.awieclawski.configuration.ConfigServerApp" />
+    <module name="config-server" />
+    <option name="VM_PARAMETERS" value="-Dzone_name=EU " />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="edu.awieclawski.configuration.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
